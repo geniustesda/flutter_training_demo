@@ -17,7 +17,7 @@ class _PullDownRefreshListState extends State<PullDownRefreshList> {
 
   Future onRefresh() {
     return Future.delayed(Duration(seconds: 1), () {
-      Toast.show('当前已是最新数据', context);
+      Toast.show('当前已是最新数据');
     });
   }
 
