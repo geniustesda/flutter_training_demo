@@ -63,29 +63,31 @@ class Programme extends StatelessWidget {
                     ),
                   ),
                 ),
-                // !this.data.needVip ? null : Positioned(
-                //   left: 0,
-                //   top: 0,
-                //   child: Container(
-                //     padding: EdgeInsets.fromLTRB(5, 2, 10, 2),
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.only(
-                //         topLeft: Radius.circular(4),
-                //         bottomRight: Radius.circular(20),
-                //       ),
-                //       gradient: LinearGradient(
-                //           colors: [Color(0xFFA17551), Color(0xFFCCBEB5)]),
-                //     ),
-                //     child: Text(
-                //       'VIP',
-                //       style: TextStyle(
-                //         fontSize: 14,
-                //         fontWeight: FontWeight.bold,
-                //         color: Colors.white,
-                //       ),
-                //     ),
-                //   ),
-                // ),
+                // !this.data.needVip ? null :
+                if (this.data.needVip)
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(5, 2, 10, 2),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(4),
+                          bottomRight: Radius.circular(20),
+                        ),
+                        gradient: LinearGradient(
+                            colors: [Color(0xFFA17551), Color(0xFFCCBEB5)]),
+                      ),
+                      child: Text(
+                        'VIP',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
               ].where((item) => item != null).toList(),
             ),
           ),
